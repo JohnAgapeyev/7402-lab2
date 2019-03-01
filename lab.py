@@ -12,7 +12,7 @@ print("Encryption plaintext {} {}".format(bin(L), bin(R)))
 #Round 1 encrypt
 X = f(1, 7, R)
 
-print("Post round 1 f() output {} {}".format(bin(L), bin(R)));
+print("Post round 1 f() output {}".format(bin(X)));
 
 #Xor output
 X = L ^ X
@@ -28,7 +28,7 @@ print("Post round 1 swap {} {}".format(bin(L), bin(R)));
 #Round 2 encrypt
 X = f(2, 7, R)
 
-print("Post round 2 f() output {} {}".format(bin(L), bin(R)));
+print("Post round 2 f() output {}".format(bin(X)));
 
 #Xor output
 L ^= X
@@ -44,7 +44,7 @@ print("Decryption")
 #Round 1 Decrypt
 X = f(2, 7, R)
 
-print("Post decrypt round 1 f() output {} {}".format(bin(L), bin(R)));
+print("Post decrypt round 1 f() output {}".format(bin(X)));
 
 #Xor output
 X = L ^ X
@@ -60,7 +60,7 @@ print("Post decrypt round 1 swap {} {}".format(bin(L), bin(R)));
 #Round 2 decrypt
 X = f(1, 7, R)
 
-print("Post decrypt round 2 f() output {} {}".format(bin(L), bin(R)));
+print("Post decrypt round 2 f() output {}".format(bin(X)));
 
 #Xor output
 L ^= X
